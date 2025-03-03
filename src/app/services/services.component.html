@@ -1,0 +1,99 @@
+<div class="container container-box">
+    <div class="header-banner">
+        <img class="img-fluid" src="./assets/images/service.png" alt="">
+    </div>
+</div>
+
+<div class="container-box-header container-box container py-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="header-h2 w-50 m-auto"><span>Our Best Service:</span> Unlock Your
+                Potential, Achieve Success!</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-11 m-auto">
+            <div class="row pt-5 justify-content-center">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4" *ngFor="let service of services">
+                    <div class="service-box position-relative">
+                        <img class="object-fit-contain w-100 h-100" [src]="service.image" alt="Service Image">
+                        <div class="service-content position-absolute">
+                            <h4>{{ service.name }}</h4>
+                        </div>
+                        <a href="#" data-bs-toggle="modal" [attr.data-bs-target]="'#' + service.id"
+                            class="service-link position-absolute justify-content-center align-items-center flex-column d-flex gap-1">
+                            <img class="export" src="./assets/images/export.svg" alt="">
+                            <p>Enquire</p>
+                        </a>
+                    </div>
+            
+                    <!-- Modal -->
+                    <div class="modal fade" [id]="service.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content p-xl-4 p-3 pt-xl-0 pt-0">
+                                <div class="modal-header pb-0 border-0">
+                                    <div class="row mb-2">
+                                        <div class="col-12 text-center">
+                                            <h2 class="header-h2 pt-0 m-auto">Let’s Talk? <span> Contact Ovast</span></h2>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            <p class="m-auto text-center mt-3">We'd love to hear from you! Whether you have a question, 
+                                                need assistance, or want to learn more about our services, please feel free to reach out.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="career-content-box">
+                                    <ul class="check-box mb-5">
+                                      <li *ngFor="let option of ['Free Consultation', 'Business', 'Group', 'Individual']; let i = index">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" formControlName="flexRadioDefault" [value]="option" id="radio-btn-{{i}}">
+                                          <label class="form-check-label" for="radio-btn-{{i}}">{{ option }}</label>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                    <div *ngIf="contactForm.controls['flexRadioDefault'].touched && contactForm.controls['flexRadioDefault'].invalid">
+                                      <small class="text-danger">Please select an option</small>
+                                    </div>
+                                  
+                                    <div class="row mb-4">
+                                      <p>Personal Details</p>
+                                      <div class="col-lg-4 col-12">
+                                        <input type="text" class="form-control" formControlName="name" placeholder="Enter your name">
+                                        <small *ngIf="contactForm.controls['name'].touched && contactForm.controls['name'].invalid" class="text-danger">
+                                          Name is required and must be at least 3 characters.
+                                        </small>
+                                      </div>
+                                      <div class="col-lg-4 col-12">
+                                        <input type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+                                        <small *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid" class="text-danger">
+                                          Please enter a valid email.
+                                        </small>
+                                      </div>
+                                      <div class="col-lg-4 col-12">
+                                        <input type="number" class="form-control" formControlName="phone" placeholder="Enter your phone number">
+                                        <small *ngIf="contactForm.controls['phone'].touched && contactForm.controls['phone'].invalid" class="text-danger">
+                                          Enter a valid 10-digit phone number.
+                                        </small>
+                                      </div>
+                                    </div>
+                                  
+                                    <div class="mb-3">
+                                      <p class="mb-3">Message</p>
+                                      <textarea class="form-control" formControlName="message" placeholder="Tell us about your business"></textarea>
+                                      <small *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].invalid" class="text-danger">
+                                        Message is required.
+                                      </small>
+                                    </div>
+                                  
+                                    <button type="submit" class="btn btn-success w-100 mt-4 mb-5" [disabled]="contactForm.invalid">
+                                      Let’s get Started
+                                    </button>
+                                  </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div>

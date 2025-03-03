@@ -1,0 +1,39 @@
+<div class="container container-box">
+    <div class="header-banner">
+        <img class="img-fluid" src="./assets/images/products.png" alt="">
+    </div>
+</div>
+
+<div class="container-box-header container-box container py-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2 class="header-h2 w-50 m-auto"><span>Our Products</span></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="filter-section">
+                <ul>
+                    <li *ngFor="let filter of filters" 
+                        [class.active]="activeFilter === filter.value" 
+                        (click)="setActiveFilter(filter.value)">
+                        {{ filter.name }}
+                    </li>
+                </ul>
+                <div class="products">
+                    <div *ngFor="let product of products" 
+                         class="product" 
+                         [hidden]="!isProductVisible(product.category)">
+                        <div class="product-box">
+                            <div class="product-img">
+                                <img class="img-fluid" [src]="product.image" alt="">
+                            </div>
+                            <p class="text-center mt-3">{{ product.name }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,133 @@
+.career-content-box {
+    color: #0D1B42;
+    font-size: 36px;
+    font-weight: 700;
+
+    .check-box {
+        padding: 0;
+        list-style: none;
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .form-check {
+            height: 40px;
+            padding-left: 1.2em !important;
+
+            @media (max-width: 700px) {
+                padding-left: 30px;
+            }
+
+            .form-check-input {
+                margin-left: -1.2em !important;
+                width: 24px;
+                height: 24px;
+                border: 2px solid #6DCBC0;
+                width: 30px;
+                height: 30px;
+                margin-top: 15px;
+                cursor: pointer;
+
+                @media (max-width: 700px) {
+                    margin-left: -33px;
+                    margin-top: 19px !important;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+
+            label {
+                font-size: 20px;
+                font-weight: 400;
+                color: #0D1B42;
+                cursor: pointer;
+
+                @media (max-width: 700px) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 20px;
+        color: #000000;
+
+        @media (max-width: 750px) {
+            text-align: center;
+        }
+    }
+
+    textarea,
+    .form-control {
+        padding: 13px 38px 13px 38px;
+        border-radius: 44px !important;
+        background-color: #E4FEEF91;
+        border: 0;
+
+        @media (max-width: 992px) {
+            padding: 13px 20px 10px 20px;
+            border-radius: 26px !important;
+        }
+    }
+
+    textarea {
+        min-height: 300px;
+    }
+
+    .btn-success {
+        background-color: #449756;
+        padding: 13px 38px 13px 38px;
+        border-radius: 44px !important;
+        font-size: 20px;
+        font-weight: 400;
+        color: #fff;
+    }
+}
+
+.career-box {
+    background: linear-gradient(98.47deg, #F9F4E7 5.77%, #DBF5E6 87.74%);
+    border-radius: 31px;
+    padding: 15px;
+
+    @media (max-width: 992px) {
+        padding-bottom: 30px !important;
+    }
+
+    .career-box-zoom {
+        overflow: hidden;
+        border-radius: 24px;
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            max-width: 100%;
+            transition: all 0.3s;
+            display: block;
+            width: 100%;
+            height: auto;
+            transform: scale(1);
+        }
+    }
+
+    .arrow-a {
+        border-bottom: 0;
+        color: #0D1B42;
+        font-weight: 700;
+        font-size: 16px;
+        text-decoration: none;
+        padding-bottom: 5px;
+
+        i {
+            transform: rotate(45deg);
+        }
+    }
+}

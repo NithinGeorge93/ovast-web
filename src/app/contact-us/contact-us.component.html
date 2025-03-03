@@ -1,0 +1,87 @@
+<div class="container container-box">
+    <div class="header-banner">
+        <img class="img-fluid" src="assets/images/Contact us.png" alt="">
+    </div>
+</div>
+
+<div class="container-box-header container-box container py-5 pb-0">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="header-h2 w-50 m-auto">Let’s Talk?<span> Contact Ovast</span>
+            </h2>
+            <p class="w-50 m-auto text-center mt-3">We'd love to hear from you! Whether you have a question, need
+                assistance, or want to learn more about our services, please feel free to reach out to us.</p>
+        </div>
+    </div>
+
+    <div class="col-12 pt-5 pb-4">
+        <div class="col-lg-10 col-12 m-auto career-content-box">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                <ul class="check-box mb-5">
+                  <li *ngFor="let option of ['Free Consultation', 'Business', 'Group', 'Individual']; let i = index">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" formControlName="flexRadioDefault" [value]="option" id="radio-btn-{{i}}">
+                      <label class="form-check-label" for="radio-btn-{{i}}">{{ option }}</label>
+                    </div>
+                  </li>
+                </ul>
+                <div *ngIf="contactForm.controls['flexRadioDefault'].touched && contactForm.controls['flexRadioDefault'].invalid">
+                  <small class="text-danger">Please select an option</small>
+                </div>
+              
+                <div class="row mb-4">
+                  <p>Personal Details</p>
+                  <div class="col-lg-4 col-12">
+                    <input type="text" class="form-control" formControlName="name" placeholder="Enter your name">
+                    <small *ngIf="contactForm.controls['name'].touched && contactForm.controls['name'].invalid" class="text-danger">
+                      Name is required and must be at least 3 characters.
+                    </small>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <input type="email" class="form-control" formControlName="email" placeholder="Enter your email">
+                    <small *ngIf="contactForm.controls['email'].touched && contactForm.controls['email'].invalid" class="text-danger">
+                      Please enter a valid email.
+                    </small>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <input type="number" class="form-control" formControlName="phone" placeholder="Enter your phone number">
+                    <small *ngIf="contactForm.controls['phone'].touched && contactForm.controls['phone'].invalid" class="text-danger">
+                      Enter a valid 10-digit phone number.
+                    </small>
+                  </div>
+                </div>
+              
+                <div class="mb-3">
+                  <p class="mb-3">Message</p>
+                  <textarea class="form-control" formControlName="message" placeholder="Tell us about your business"></textarea>
+                  <small *ngIf="contactForm.controls['message'].touched && contactForm.controls['message'].invalid" class="text-danger">
+                    Message is required.
+                  </small>
+                </div>
+              
+                <button type="submit" class="btn btn-success w-100 mt-4 mb-5" [disabled]="contactForm.invalid">
+                  Let’s get Started
+                </button>
+              </form>
+              
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-lg-11 col-12 m-auto">
+            <div class="career-box d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center"
+                href="#">
+                <div class="col-xl-7 col-lg-6 career-box-zoom">
+                    <img class="img-fluid" src="assets/images/close-up-colleagues-learning-work 4.png"
+                        alt="">
+                </div>
+                <div class="col-xl-4 col-lg-5 col-12 ms-0">
+                    <h2 class="header-h2 mb-4"><span>Your business begins with free consultation:</span> Let’s get started
+                    </h2>
+                    <a class="arrow-a" href="#">Start Career with Us <i
+                            class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

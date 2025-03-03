@@ -1,0 +1,118 @@
+.about-banner {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    @media (max-width: 1464px) {
+        height: auto;
+    }
+
+    &::after {
+        content: "";
+        background: #0D1B42;
+        opacity: 48%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        z-index: 2;
+        top: 0;
+    }
+
+    .section-background {
+        height: auto;
+        z-index: 1;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 100%;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 1464px) {
+            position: relative;
+        }
+    }
+}
+
+.clint-box {
+    background: linear-gradient(98.47deg, #F9F4E7 5.77%, #DBF5E6 87.74%);
+    padding: 40px;
+    border-radius: 31px;
+
+    &.clint-box-z {
+        transition: .5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.04, 1.06);
+        }
+    }
+
+    h3 {
+        color: #449756;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 48px;
+
+        @media (max-width: 550px) {
+            font-size: 34px;
+        }
+    }
+
+    p {
+        color: #0D1B42;
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+.about-bottom-box {
+    background-image: url(../../assets/images/about-20.png);
+    min-height: 500px;
+    border-radius: 24px !important;
+    overflow: hidden;
+    padding: 40px;
+    display: flex;
+    align-items: end;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background: linear-gradient(180deg, rgba(13, 27, 66, 0) 0%, #070E21 100%);
+        z-index: 4;
+        bottom: 0;
+        height: 70%;
+        left: 0;
+        right: 0;
+    }
+
+    .about-box-c {
+        color: #fff;
+        z-index: 4;
+
+        h3 {
+            font-weight: 700;
+            font-size: 48px;
+
+            @media (max-width: 550px) {
+                font-size: 34px;
+            }
+        }
+
+        h4 {
+            font-size: 32px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        h5,
+        p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+}

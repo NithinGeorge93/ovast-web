@@ -1,0 +1,241 @@
+<div class="container container-box">
+    <div class="row header-box">
+        <div class="col-12 col-xl-6 d-flex align-items-center">
+            <div>
+                <h1>Unlock Your Potential with our Expert-led <span>Training Sessions.</span></h1>
+                <p class="w-75 mb-5">Partner with OVAST to navigate the complexities of modern consultancy. Our
+                    innovative approach ensures your business stays ahead in a competitive market.</p>
+                <div class="d-inline-flex align-items-center gap-4">
+                    <a class="btn btn-primary rounded-pill" href="#" role="button">Choose the Services</a>
+                    <a class="arrow" href="#">Get a Free Consultation <i class="fa-solid fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-6 image-vector">
+            <img class="img-fluid" src="./assets/images/image 1.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="container-r-t py-5">
+    <div class="container pb-4">
+        <div class="row">
+            <div class="col d-flex flex-xl-row flex-column text-xl-start text-center align-items-start">
+                <div
+                    class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-4 mb-xl-0 mb-4 col-12 col-xl-6">
+                    <div class="career-box-zoom">
+                        <img class="img-fluid" src="assets/images/close-up-colleagues-learning-work 1.png" alt="">
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-between h-100">
+                    <div>
+                        <h3 class="tittle-s">About Us</h3>
+                        <h2 class="header-h2">Our approach is practical, creative and collaborative We listen and
+                            <span>
+                                integrate our clients vast experience.</span>
+                        </h2>
+                    </div>
+                    <div>
+                        <p>OVAST is a research, training and consulting company specialised in offering upto date
+                            Practical Solutions on organisational and social development challenges. Ovast strives
+                            towards innovating sustainable solutions and developing competences with in the public,
+                            private, and the non-profit sectors We do this through research, innovation, training,
+                            information dissemination and quality technical advice.
+                        </p>
+
+                        <a class="arrow-a" href="#">More About Us <i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<video #videoPlayer autoplay muted loop class="section-background banner-over">
+    <source src="assets/videos/home-v.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="container-r-b py-5">
+    <div class="container py-4">
+        <h2 class="header-h2 text-center w-50 m-auto mb-3"><span>Our Best Service:</span>  Unlock Your Potential,
+            Achieve Success!</h2>
+        <p class="w-75 m-auto text-center">At Ovast, we redefine consultancy through a dynamic blend of innovation,
+            expertise, and strategic vision. Our dedicated team is committed to delivering tailored solutions that
+            transcend traditional consulting boundaries.</p>
+    </div>
+
+    <div class="swiper-container pt-5">
+        <div class="swiper-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor=" let slide of slides">
+                    <div class="picture">
+                        <img [src]="slide.image" [alt]="slide.alt" class="slide-image">
+                    </div>
+
+                    <div class="text-box">
+                        <h4>Human Resources & Headhunting</h4>
+                        <p>This services are tailored to help restaurants and culinary ventures build strong,
+                            talented teams that drive success and excellence in the hospitality industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Swiper Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Swiper Navigation Buttons -->
+            <div class="bottom-nav">
+                <div class="swiper-button-next">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-box pt-5 mt-3">
+        <div class="clint-box">
+            <h2 class="header-h2 text-center w-50 m-auto mb-3"><span>Excellence in Action:</span> Client Journeys
+                with
+                OVAST</h2>
+            <p class="w-75 m-auto text-center">At Ovast, we redefine consultancy by seamlessly blending innovation,
+                expertise, and strategic vision. Our dedicated team is committed to providing tailored solutions
+                that go
+                beyond traditional consulting boundaries.</p>
+
+
+            <div class="swiper-testimonial mt-5">
+                <!-- Additional required wrapper -->
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide" *ngFor="let item of testimonials">
+                        <h3 class="mb-3">{{ item.text }}</h3>
+                        <p>{{ item.textTwo }}</p>
+                        <p class="name mt-3">{{ item.textThree }}</p>
+                    </div>
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Swiper Navigation Buttons -->
+                <div class="bottom-nav">
+                    <div class="swiper-button-next">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="main mt-3 pt-5 text-center" #counterSection id="counter">
+                <div class="counter-box" *ngFor="let item of counters">
+                  <div class="d-flex justify-content-center">
+                    <div class="counter">{{ item.currentValue }}</div> {{ item.suffix }}
+                  </div>
+                  <p>{{ item.label }}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="header-h2 text-center w-50 m-auto mb-5"><span>Explore Our Insights:</span> Read the Latest
+                Blog Posts</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-11 m-auto">
+            <div class="row mb-4 align-items-center">
+                <div class="col-12 col-xl-6 mb-4 mb-lg-0">
+                    <div class="news-box">
+                        <div class="picture-box">
+                            <img class="img-fluid" src="./assets/images/close-up-colleagues-learning-work 11.png"
+                                alt="">
+                        </div>
+
+                        <div class="news-slide">
+                            <h3 class="mb-3">"Navigating the Complexities of Consultancy"</h3>
+                            <p class="date">August 12, 2024</p>
+                            <p>Unlock the secrets to staying ahead of the curve and driving success through
+                                adaptability. Dive into our latest post on Ovast’s blog to elevate your
+                                understanding of the dynamic world of consulting.</p>
+                            <a class="arrow-a" href="#">See all News <i class="fa-solid fa-arrow-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-xl-6 news-box-right">
+                    <div class="d-flex flex-column flex-lg-row gap-3 align-items-center p-2 mb-4 mb-lg-2" href="#">
+                        <div class="hover-ef position-relative">
+                            <img class="img-fluid" src="./assets/images/close-up-colleagues-learning-work 41.png"
+                                alt="">
+                            <a href="#"
+                                class="service-link position-absolute justify-content-center align-items-center flex-column d-flex gap-1">
+                                <img class="export" src="./assets/images/export.svg" alt=""></a>
+                        </div>
+                        <div class="col text-center text-lg-start">
+                            <h6 class="mb-2"><a href="#">A Deep Dive into Our Approach</a></h6>
+                            <p class="date-news">August 12, 2024</p>
+                            <p class="mb-0">Unlock the secrets to staying ahead of the curve and driving success
+                                through adaptability.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row gap-3 align-items-center p-2 mb-4 mb-lg-2" href="#">
+                        <div class="hover-ef position-relative">
+                            <img class="img-fluid" src="./assets/images/close-up-colleagues-learning-work 21.png"
+                                alt="">
+                            <a href="#"
+                                class="service-link position-absolute justify-content-center align-items-center flex-column d-flex gap-1">
+                                <img class="export" src="./assets/images/export.svg" alt=""></a>
+                        </div>
+                        <div class="col text-center text-lg-start">
+                            <h6 class="mb-2"><a href="#">Revolutionizing Business with Ovast</a></h6>
+                            <p class="date-news">August 12, 2024</p>
+                            <p class="mb-0">Unlock the secrets to staying ahead of the curve and driving success
+                                through adaptability.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row gap-3 align-items-center p-2" href="#">
+                        <div class="hover-ef position-relative">
+                            <img class="img-fluid" src="./assets/images/close-up-colleagues-learning-work 31.png"
+                                alt="">
+                            <a href="#"
+                                class="service-link position-absolute justify-content-center align-items-center flex-column d-flex gap-1">
+                                <img class="export" src="./assets/images/export.svg" alt=""></a>
+                        </div>
+                        <div class="col text-center text-lg-start">
+                            <h6 class="mb-2"><a href="#">Unveiling the Ovast Playbook</a></h6>
+                            <p class="date-news">August 12, 2024</p>
+                            <p class="mb-0">Unlock the secrets to staying ahead of the curve and driving success
+                                through adaptability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="career-box d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center"
+                        href="#">
+                        <div class="col-lg-6 career-box-zoom">
+                            <img class="img-fluid" src="./assets/images/close-up-colleagues-learning-work 4.png" alt="">
+                        </div>
+                        <div class="col-lg-5 col-12 ms-lg-4 ms-0">
+                            <h2 class="header-h2 mb-4"><span>Looking for Better Career:</span> Join with us Today!
+                            </h2>
+                            <a class="arrow-a" href="#">Start Career with Us <i class="fa-solid fa-arrow-up"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

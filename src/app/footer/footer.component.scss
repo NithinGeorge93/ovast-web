@@ -1,0 +1,164 @@
+footer {
+    .container-box {
+        background-color: #0D1B42;
+        padding: 10px 70px;
+        border-radius: 31px;
+        padding-top: 0;
+        max-width: 1464px;
+        margin: 0 auto;
+
+        @media (max-width: 1464px) {
+            border-radius: 31px 31px 0 0 !important;
+        }
+
+        @media (max-width: 550px) {
+            padding: 10px 25px;
+        }
+
+        .white-logo {
+            height: 200px;
+
+            @media (max-width: 992px) {
+                height: 130px;
+            }
+        }
+
+        .footer-box {
+            border-top: 2px solid #4497560F;
+            border-bottom: 2px solid #4497560F;
+
+            h4 {
+                color: #6DCBC0;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            p {
+                font-size: 18px;
+                color: #fff !important;
+                font-weight: 300;
+
+                @media (max-width: 550px) {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .footer-menu {
+            border-bottom: 2px solid #4497560F;
+
+            ul {
+                padding: 0;
+                list-style: none;
+
+                li {
+                    margin-bottom: 10px;
+
+                    a {
+                        color: #fff;
+                        text-decoration: none;
+                        font-size: 16px;
+                        font-weight: 300;
+
+                        @media (max-width: 550px) {
+                            font-size: 16px;
+                        }
+
+                        &[href^="tel"] {
+                            color: #fff !important;
+                        }
+                    }
+                }
+            }
+
+            h4 {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .social-media {
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    margin: 0 5px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .subscribe {
+                @media (max-width: 550px) {
+                    border-bottom: 1px solid #FFFFFF5C;
+                    justify-content: center;
+                    gap: 10px;
+                }
+
+                .col,
+                .col-auto {
+                    border-bottom: 1px solid #FFFFFF5C;
+
+                    @media (max-width: 550px) {
+                        border-bottom: 0;
+                    }
+                }
+
+                button {
+                    padding: 0;
+                    background-color: transparent;
+                    color: #fff;
+                    border: 0;
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 0 !important;
+
+                    i {
+                        transform: rotate(45deg);
+                    }
+
+                    @media (max-width: 550px) {
+                        font-size: 12px;
+                        height: 40px;
+                    }
+                }
+
+                .form-control {
+                    background-color: transparent;
+                    border: 0;
+                    color: #fff;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    @media (max-width: 550px) {
+                        font-size: 12px;
+                        height: 40px;
+                    }
+
+                    &::placeholder {
+                        color: #9FA6B0;
+                    }
+
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+
+                }
+            }
+        }
+
+        .footer-content {
+            color: #fff;
+
+            span a,
+            span {
+                color: #6DCBC0;
+                text-decoration: none;
+            }
+        }
+    }
+}

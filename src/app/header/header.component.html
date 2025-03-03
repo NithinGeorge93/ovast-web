@@ -1,0 +1,36 @@
+<header [ngClass]="getClassForUrl()">
+    <div class="header-top p-2"></div>
+    <nav>
+        <div class="navbar">
+            <div class="d-flex justify-content-center align-items-center">
+                <i class="fa fa-bars" (click)="openMenu()"></i>
+                <!-- <i class="fa-solid fa-bars"></i> -->
+                <div class="logo"><a routerLink="/" [ngClass]="{'active': isActiveRoute('/')}">
+                    <img src="assets/images/logo.svg" alt=""></a></div>
+                <div class="logo white-logo"><a routerLink="/" [ngClass]="{'active': isActiveRoute('/')}">
+                    <img src="assets/images/white-log.svg" alt=""></a></div>
+            </div>
+            <div class="nav-links" [ngClass]="{'open': navOpen}">
+                <div class="sidebar-logo">
+                    <i class="fa fa-xmark" (click)="closeMenu()"></i>
+                    <!-- <i class="fa-solid fa-xmark"></i> -->
+                </div>
+                <ul class="links">
+                    <li><a routerLink="/" [ngClass]="{'active': isActiveRoute('/')}">Home</a></li>
+                    <li>
+                        <a routerLink="about" [ngClass]="{'active': isActiveRoute('/about')}">About</a>
+                    </li>
+                    <li>
+                        <a routerLink="services" [ngClass]="{'active': isActiveRoute('/services')}">Services</a>
+                    </li>
+                    <li><a routerLink="products" [ngClass]="{'active': isActiveRoute('/products')}">Products</a></li>
+                    <li><a routerLink="blog" [ngClass]="{'active': isActiveRoute('/blog')}">Blog</a></li>
+                    <li><a routerLink="contact-us" [ngClass]="{'active': isActiveRoute('/contact-us')}">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="btn btn-primary rounded-pill" href="#" role="button"><i class="fa-solid fa-phone-volume me-2"></i>
+                +974 4418 6565</a>
+        </div>
+    </nav>
+</header>
